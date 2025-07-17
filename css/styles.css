@@ -1,135 +1,157 @@
 /* 
-verde-claro: #7effb2;
-verde-escuro: #175a2c;
-cor-fundo: #3a3b42;
-fundo-vermelho: #7B3F3F;
-fundo-verde: #507F6A;
+Cores usadas no projeto:
+- verde-claro: #7effb2;
+- verde-escuro: #175a2c;
+- cor-fundo: #3a3b42;
+- fundo-vermelho: #7B3F3F;
+- fundo-verde: #507F6A;
 */
 
+/* Reset geral: remove margens, espaçamentos e define a caixa de medida */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo geral do corpo da página */
 body {
-  color: white;
-  font-family: "Montserrat";
-  font-size: 28px;
+  color: white; /* Cor do texto */
+  font-family: "Montserrat"; /* Fonte personalizada */
+  font-size: 28px; /* Tamanho da fonte */
 }
 
+/* Estilo para os ícones SVG */
 svg {
-  width: 75px;
-  fill: #7effb2;
+  width: 75px; /* Largura fixa */
+  fill: #7effb2; /* Cor de preenchimento (verde-claro) */
 }
 
+/* Estilo para o título */
 h1 {
   font-size: 32px;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s; /* Transição suave para mudanças de opacidade */
 }
 
+/* Garante que imagens se comportem como bloco */
 img {
   display: block;
 }
 
+/* Container principal da interface */
 .tela {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background-color: #3a3b42;
+  flex-direction: column; /* Elementos empilhados verticalmente */
+  gap: 5px; /* Espaço entre os elementos */
+  background-color: #3a3b42; /* Cor de fundo escura */
   width: 300px;
-  aspect-ratio: 400/490;
+  aspect-ratio: 400/490; /* Proporção entre largura e altura */
   padding: 20px;
   padding-top: 0;
-  border-radius: 30px;
-  overflow: auto;
-  margin: 20px auto;
+  border-radius: 30px; /* Cantos arredondados */
+  overflow: auto; /* Rola se passar do limite */
+  margin: 20px auto; /* Centraliza na horizontal com margem superior */
 }
 
+/* Remove a barra de rolagem do container `.tela` */
 .tela::-webkit-scrollbar {
   display: none;
 }
 
+/* Cabeçalho da tela */
 .cabecalho {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
+  justify-content: space-between; /* Espaço entre os itens */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  position: sticky; /* Fixa no topo ao rolar */
   padding-top: 20px;
   padding-bottom: 10px;
   top: 0;
-  background-color: #3a3b42;
+  background-color: #3a3b42; /* Mantém fundo igual ao da tela */
 }
 
+/* Lista de exercícios */
 .exercicios {
   display: flex;
   gap: 10px;
-  flex-direction: column;
+  flex-direction: column; /* Empilha os itens verticalmente */
 }
 
+/* Cada item de exercício */
 .exercicio {
-  background-color: #175a2c;
-  /* width: 150px; */
+  background-color: #175a2c; /* Verde escuro */
   padding: 10px;
-  border-radius: 10px;
-  /* border: 2px solid red;
-  margin: 20px; */
-  cursor: pointer;
+  border-radius: 10px; /* Arredondado */
+  cursor: pointer; /* Muda o cursor ao passar o mouse */
+  /* Comentado:
+     - width: 150px;
+     - border e margin para teste */
 }
 
+/* Texto da atividade */
 .atividade {
-  font-weight: 600;
+  font-weight: 600; /* Negrito */
 }
 
+/* Seção do cronômetro (inicialmente escondida) */
 .cronometro {
   display: none;
   margin-top: 25px;
 }
 
+/* Container dos botões do cronômetro */
 .botoes {
   display: flex;
   gap: 10px;
 }
 
+/* Estilo geral para os botões */
 .botao {
   width: 75px;
-  /* background-color: green; */
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  /* Comentado: cor de fundo de teste */
 }
 
+/* Botão de iniciar ou pausar (verde) */
 .play,
 .pause {
   background-color: #507f6a;
 }
 
+/* Botão de fechar/cancelar (vermelho) */
 .close {
   background-color: #7b3f3f;
 }
 
+/* O botão pause começa escondido */
 .pause {
   display: none;
 }
 
+/* Link para voltar */
 .voltar {
   text-decoration: underline;
   cursor: pointer;
 }
 
+/* Layout do tempo (minutos e segundos) */
 .tempo {
   display: flex;
   gap: 5px;
   font-size: 40px;
 }
 
+/* Cada número do cronômetro */
 .numero {
   display: flex;
   justify-content: center;
   width: 55px;
 }
 
+/* Quando o cronômetro começa, mostra pause e esconde play */
 .iniciou .play {
   display: none;
 }
@@ -138,6 +160,7 @@ img {
   display: block;
 }
 
+/* Quando a tela está no modo cronômetro: */
 .tela--cronometro .cronometro {
   display: flex;
   flex-direction: column;
@@ -145,10 +168,12 @@ img {
   gap: 10px;
 }
 
+/* Oculta a lista de exercícios */
 .tela--cronometro .exercicios {
   display: none;
 }
 
+/* Oculta o título da tela */
 .tela--cronometro h1 {
   opacity: 0;
 }
