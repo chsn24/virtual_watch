@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meu primeiro projeto</title>
 
+    <!-- Link para o arquivo de estilos CSS -->
     <link rel="stylesheet" href="css/styles.css" />
 
+    <!-- Script JavaScript deferido para executar depois do carregamento da página -->
     <script defer src="scripts.js"></script>
 
+    <!-- Importação da fonte Montserrat do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,13 +21,17 @@
   </head>
   <body>
     <div class="tela">
+      <!-- Cabeçalho com título e horário -->
       <div class="cabecalho">
         <h1>Exercício</h1>
         <p class="horario">20:56</p>
       </div>
 
+      <!-- Seção de exercícios com ícones SVG -->
       <div class="exercicios">
+
         <div class="exercicio">
+          <!-- SVG do ícone de natação -->
           <svg
             id="Capa_1"
             enable-background="new 0 0 512 512"
@@ -47,6 +54,7 @@
         </div>
 
         <div class="exercicio">
+          <!-- SVG do ícone de corrida -->
           <svg
             id="Capa_1"
             enable-background="new 0 0 512 512"
@@ -62,6 +70,7 @@
         </div>
 
         <div class="exercicio">
+          <!-- SVG do ícone de lift -->
           <svg
             id="Layer_1"
             enable-background="new 0 0 240 241.461"
@@ -90,7 +99,9 @@
         </div>
       </div>
 
+      <!-- Seção do cronômetro -->
       <div class="cronometro">
+        <!-- Exibição do tempo (minuto, segundo, centésimo) -->
         <div class="tempo">
           <p class="minuto numero">00</p>
           <p>:</p>
@@ -98,23 +109,28 @@
           <p>,</p>
           <p class="centesimo numero">00</p>
         </div>
+
+        <!-- Botões de controle do cronômetro -->
         <div class="botoes">
+          <!-- Botão para fechar -->
           <div class="botao close">
             <img src="Imagens/close.svg" alt="Ícone de Fechar" />
           </div>
 
+          <!-- Botão para iniciar -->
           <div class="botao play">
             <img src="Imagens/play.svg" alt="Ícone de Play" />
           </div>
 
+          <!-- Botão para pausar -->
           <div class="botao pause">
             <img src="Imagens/pause.svg" alt="Ícone de Pause" />
           </div>
         </div>
+
+        <!-- Link para voltar -->
         <p class="voltar">Voltar</p>
       </div>
     </div>
-
-    <!-- <script src="scripts.js"></script> -->
   </body>
 </html>
