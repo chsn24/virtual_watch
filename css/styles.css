@@ -1,0 +1,154 @@
+/* 
+verde-claro: #7effb2;
+verde-escuro: #175a2c;
+cor-fundo: #3a3b42;
+fundo-vermelho: #7B3F3F;
+fundo-verde: #507F6A;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 28px;
+}
+
+svg {
+  width: 75px;
+  fill: #7effb2;
+}
+
+h1 {
+  font-size: 32px;
+  transition: opacity 0.3s;
+}
+
+img {
+  display: block;
+}
+
+.tela {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #3a3b42;
+  width: 300px;
+  aspect-ratio: 400/490;
+  padding: 20px;
+  padding-top: 0;
+  border-radius: 30px;
+  overflow: auto;
+  margin: 20px auto;
+}
+
+.tela::-webkit-scrollbar {
+  display: none;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  top: 0;
+  background-color: #3a3b42;
+}
+
+.exercicios {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.exercicio {
+  background-color: #175a2c;
+  /* width: 150px; */
+  padding: 10px;
+  border-radius: 10px;
+  /* border: 2px solid red;
+  margin: 20px; */
+  cursor: pointer;
+}
+
+.atividade {
+  font-weight: 600;
+}
+
+.cronometro {
+  display: none;
+  margin-top: 25px;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+}
+
+.botao {
+  width: 75px;
+  /* background-color: green; */
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.play,
+.pause {
+  background-color: #507f6a;
+}
+
+.close {
+  background-color: #7b3f3f;
+}
+
+.pause {
+  display: none;
+}
+
+.voltar {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tempo {
+  display: flex;
+  gap: 5px;
+  font-size: 40px;
+}
+
+.numero {
+  display: flex;
+  justify-content: center;
+  width: 55px;
+}
+
+.iniciou .play {
+  display: none;
+}
+
+.iniciou .pause {
+  display: block;
+}
+
+.tela--cronometro .cronometro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tela--cronometro .exercicios {
+  display: none;
+}
+
+.tela--cronometro h1 {
+  opacity: 0;
+}
